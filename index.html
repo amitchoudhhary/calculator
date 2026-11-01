@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Amit's Calculator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="calculator">
+    <header class="topbar">
+      <h1>Amit's Calculator</h1>
+      <div class="topbar-actions">
+        <button class="icon-btn" id="theme-toggle" type="button" aria-label="Toggle light/dark theme" title="Toggle theme">&#9680;</button>
+        <button class="icon-btn" id="history-toggle" type="button" aria-label="Show history" aria-expanded="false" title="History">&#128339;</button>
+      </div>
+    </header>
+
+    <div class="display">
+      <div id="history"></div>
+      <div id="current"></div>
+    </div>
+
+    <div class="keys">
+      <button class="key sci" data-action="sqrt">&radic;</button>
+      <button class="key sci" data-action="square">x&sup2;</button>
+      <button class="key sci" data-action="reciprocal">1/x</button>
+      <button class="key sci" data-action="negate">&plusmn;</button>
+
+      <button class="key function" data-action="clear">AC</button>
+      <button class="key function" data-action="delete">&#9003;</button>
+      <button class="key function" data-action="percent">%</button>
+      <button class="key operator" data-action="operator" data-value="/">&divide;</button>
+
+      <button class="key" data-action="number" data-value="7">7</button>
+      <button class="key" data-action="number" data-value="8">8</button>
+      <button class="key" data-action="number" data-value="9">9</button>
+      <button class="key operator" data-action="operator" data-value="*">&times;</button>
+
+      <button class="key" data-action="number" data-value="4">4</button>
+      <button class="key" data-action="number" data-value="5">5</button>
+      <button class="key" data-action="number" data-value="6">6</button>
+      <button class="key operator" data-action="operator" data-value="-">&minus;</button>
+
+      <button class="key" data-action="number" data-value="1">1</button>
+      <button class="key" data-action="number" data-value="2">2</button>
+      <button class="key" data-action="number" data-value="3">3</button>
+      <button class="key operator" data-action="operator" data-value="+">+</button>
+
+      <button class="key zero" data-action="number" data-value="0">0</button>
+      <button class="key" data-action="decimal">.</button>
+      <button class="key equals" data-action="equals">=</button>
+    </div>
+
+    <section class="history-panel" id="history-panel" hidden>
+      <div class="history-head">
+        <h2>History</h2>
+        <button class="text-btn" id="history-clear" type="button">Clear</button>
+      </div>
+      <ul id="history-list"></ul>
+      <p class="history-empty" id="history-empty">No calculations yet.</p>
+    </section>
+
+    <footer class="credit">Made by Amit</footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
